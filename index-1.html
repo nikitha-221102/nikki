@@ -1,1 +1,131 @@
-hey i am your first html file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>swiggy</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            background-color:#f7f1ea;
+            font-family:Arial, sans-serif;
+            margin:0;
+        }
+        .container{
+            background-color:#26a69a;
+            padding: 20px;
+            height:600px;
+        }
+        .top-bar{
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:10px 20px;
+        }
+        .home, .login{
+            display:flex;
+            align-items:centre;
+        }
+        .icon{
+            width:26px;
+            height:26px;
+            cursor:pointer;
+        }
+        .search{
+            text-align:centre;
+            color:white;
+        }
+        .search-box{
+            display:flex;
+            justify-content:center;
+        }
+        .search-box input{
+            width:320px;
+            padding:12px;
+        }
+        .search-box button{
+            background-color: #333;
+            color:white;
+            cursor: pointer;
+        }
+        .category-section{
+            display:flex;
+            justify-content:center;
+            margin-top:60 px;
+            align-item:center;
+            gap:40px;
+            padding:40px;
+        }
+        .card{
+            width:250px;
+            background-color:white;
+            border-radius:16px;
+            padding:16px;
+            text-align:center;
+            transition:transform 0.3s
+        }
+        .card:hover{
+            transform:scale(1.05);
+        }
+        .card img{
+            width:100%;
+            height:150px;
+            object-fit:cover;
+            border-radius:12px;
+        }
+        .card h3{
+            margin-top:12px;
+            font-size:18px;
+        }
+        .card p{
+            margin-top:6px;
+            font-size:14px;
+            color:#ff5722;
+        }
+     </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="home">
+                <img src="images/home-icon.webp" class="icon" alt="home">
+            </div>
+            <div class="login">
+                <img src="images/profile-icon.webp" class="icon" alt="profile">
+            </div>
+        </div>
+        <div class="search">
+            <h2 class="search-title" style="font-size:28px;">order food online</h2>
+            <div class="search-box">
+                <input type="text" placeholder="search for restaurents or dishes">
+                <button>search</button>
+            </div>
+        </div>
+        <div class="category-section">
+            <a href="food.html" class="category">
+                <div class="card">
+                    <img src="images/food-delivery.webp">
+                    <h3>Food Delivery</h3>
+                    <p>up to 60% off</p>
+                <</div>
+           </a>
+           <a href="instamart.html" class="category">
+                <div class="card">
+                    <img src="images/instamart.webp">
+                    <h3>Instamart</h3>
+                    <p>Free Delivery</p>
+                </div>
+            </a>
+            <a href="dineout.html" class="category">
+                <div class="card">
+                    <img src="images/dineout.webp">
+                    <h3>Dineout</h3>
+                    <p>Up to 50% off</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
