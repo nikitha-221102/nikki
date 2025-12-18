@@ -3,7 +3,7 @@
 <head>
     <title>swiggy</title>
     <style>
-        *{
+      *{
             box-sizing:border-box;
         }
         body{
@@ -14,7 +14,6 @@
         .container{
             background-color:#26a69a;
             padding: 20px;
-            height:600px;
         }
         .top-bar{
             display: flex;
@@ -82,6 +81,38 @@
             font-size:14px;
             color:#ff5722;
         }
+        .av{
+            display:flex;
+            justify content:center;
+            padding 40px;
+            gap:120px;
+        }
+        .media{
+            width:420px;
+            padding: 25px;
+            border-radius:16px;
+            text-align:center;
+        }
+        .media h2{
+            margin-bottom:8px;
+            font-size:20px;
+        }
+        .media p{
+            color:#414040;
+            font-size:14px;
+            margin-bottom:15px;
+        }
+        .video{
+            height:230px;
+            width:100%;
+            margin-left:50px;
+            border-radius:12px;
+            object-fit:cover;
+        }
+        .audio{
+            width:100%;
+            margin-top:10px;
+        }
      </style>
 
 </head>
@@ -124,6 +155,21 @@
                     <p>Up to 50% off</p>
                 </div>
             </a>
+        </div>
+        <div class="av">
+            <div class="media">
+                <h2>Experience food like never before</h2>
+                <p>From top restaurants to your doorstep</p>
+                <video controls class="video">
+                    <source src="images/vedio1.mp4">
+                </video>
+            </div>
+            <div class="media">
+                <h2>Good food needs good vibes</h2>
+                <audio controls class="audio">
+                    <source src="images/audio.mp3">
+                </audio>
+            </div>
         </div>
     </div>
 

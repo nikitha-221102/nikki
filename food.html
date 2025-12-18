@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF8">
         <title>Food Delivery</title>
         <style>
             body{
                 font-family:arial,sans-serif;
                 background:#f5f5f5;
+            }
+            .top{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                padding:16px 20px;
+                background-color:rgb(249, 241, 147);
+            }
+            .back-btn{
+                font-size:18px;
+                font-weight:600;
+                color:#333;
+            }
+            .user-icon{
+                width:30px;
+                height:30px;
+                cursor:pointer;
             }
             .header{
                 background:white;
@@ -71,13 +89,28 @@
         </style>
     </head>
     <body>
+        <div class="top">
+            <a href="index-1.html" class="back-btn">&#8592 Other</a>
+            <img src="images\home-icon.webp" class="user-icon" alt="user">
+        </div>
+        <section class="mind-section">
+            <h2>What's on your mind?</h2>
+            <div class="mind-items">
+                <div class="item">
+                    <img src=""
+                </div>
+            </div>
+        </section>
         <div class="header">
             <h2>Food Delivery</h2>
             <p> Order from nearby restaurants</p>
         </div>
+        <!--
         <div class="search-box">
             <input type="text" placeholder="search for restaurents or dishes">
         </div>
+    --> 
+
         <div class="title">restaurants near you</div>
         <div class="container">
             <div class="card">
