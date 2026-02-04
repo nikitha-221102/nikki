@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <div class="order-container">
+        <div class="order-list">
+            <h2>Your Orders</h2>
+            <div class="order">
+                <h3>Spicy Hub</h3>
+                <p>Chicken Biriyani</p>
+                <p>220Rs</p>
+                <span class="delivered">Delivered</span>
+            </div>
+            <div class="order">
+                <h3>Biriyani Palace</h3>
+                <p>Veg Biriyani</p>
+                <p>180Rs</p>
+                <span class="ontheway">On The Way</span>
+            </div>
+            <div class="order">
+                <h3>Food Hub</h3>
+                <p>Noodles</p>
+                <p>120Rs</p>
+                <span class="cancelled">Canceleld</span>
+            </div>
+        </div>
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <form class="order-form">
+                <label>Order Id</label>
+                <input type="text" value="SW12345" readonly>
+                <label>Restaurant Name</label>
+                <input type="text" value="Spicy Hub">
+                <label>Food Item</label>
+                <input type="text" value="Chicken Biriyani">
+                <label>Quantity</label>
+                <input type="number" value="1">
+                <label>Delivery Address</label>
+                <textarea>12-3-45, MG Road, Hyderabad</textarea>
+                <label>Order Status</label>
+                <select>
+                    <option>Delivered</option>
+                    <option>On The Way</option>
+                    <option>Cancelled</option>
+                </select>
+                <label>Payment Mode</label>
+                <select>
+                    <option>UPI</option>
+                    <option>Cash on Delivery</option>
+                    <option>Card</option>
+                </select>
+                <button>Update Order</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

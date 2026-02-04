@@ -1,0 +1,31 @@
+.mind-section{
+            padding:20px;
+            background-color: #fff;
+        }
+        .mind-section h2{
+            font-size:22px;
+            font-weight:600;
+            margin-bottom:15px;
+        }
+        .mind-items{
+            display:flex;
+            gap:20px;
+            overflow:auto;
+        }
+        .mind-items::-webkit-scrollbar{
+            dispaly:none;
+        }
+        .item{
+            text-align:center;
+            min-width:90px;
+        }
+        .item img{
+            width:80px;
+            height:80px;
+            object-fit: cover;
+            border-radius:50%;
+        }
+        .item p{
+            margin-top:8px;
+            font-size:14px;
+        }

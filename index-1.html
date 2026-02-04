@@ -6,36 +6,27 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .table2 {
-            border: 2px solid #ffffff;
             border-collapse: collapse;
-            width:100%;
-            overflow: hidden;
+            width: 100%;
+           margin-bottom:30px;
         }
-
-        .table2 th {
-            border: 2px solid #d7ccc8;
-            border-collapse: collapse;
-            background-color: #1f2933;
+        .table2 td,.table2 th {
+            border-bottom: 1px dashed rgba(255,255,255,0.5);
             color: #ffffff;
-            padding: 14px;
-        }
-
-        .table2 td {
-            border: 2px solid #d7ccc8;
-            border-collapse: collapse;
-            background-color: #fff8e1;
-            color: #374151;
-            padding: 14px;
+            padding: 10px;
         }
 
         .table2 td:last-child {
-            color: #0f766e;
+            text-align:right;
+            color: #ffd166;
         }
     </style>
 </head>
 
 <body>
+    <a href="login.php">Login</a>
     <div class="container">
+        <button onclick="showMessage()">Welcome</button>
         <div class="top-bar">
             <div class="home">
                 <img src="images/home-icon.webp" class="icon" alt="home">
@@ -93,225 +84,232 @@
         </div>
         <div>
             <h1 style="padding:15px;text-align:center;">Food Menu</h1>
-            <p style="text-align:center;"><b><i>This is just a small preview of our menu.Explore more delicious items in:</i></b></p>
+            <p style="text-align:center;"><b><i>This is just a small preview of our menu.Explore more delicious items
+                        in:</i></b></p>
             <div style="text-align:center;">
                 <a href="food.html" style="margin-right:15px;">Food Delivery</a>
                 <a href="instamart.html" style="margin-right:20px;">Instamart</a>
                 <a href="dineout.html" style="margin-right:20px;">Dineout</a>
             </div>
         </div>
-        <div class="menu">
-            <div class="menu-card">
-                <table style="border:2px solid #ffffff;border-collapse:collapse;width:100%;overflow:hidden;">
-                    <caption>
-                        <h3>Breakfast</h3>
-                    </caption>
-                    <tr>
-                        <th
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#1f2933;color:#ffffff;padding:14px;">
-                            Items</th>
-                        <th
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#1f2933;color:#ffffff;padding:14px;">
-                            Price</th>
-                    </tr>
-                    <tr>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#374151;padding:14px;">
-                            Idli</td>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#0f766e;padding:14px;">
-                            20Rs</td>
-                    </tr>
-                    <tr>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#374151;padding:14px;">
-                            Onion Dosa</td>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#0f766e;padding:14px;">
-                            30Rs</td>
-                    </tr>
-                    <tr>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#374151;padding:14px;">
-                            Masala Dosa</td>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#0f766e;padding:14px;">
-                            35Rs</td>
-                    </tr>
-                    <tr>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#374151;padding:14px;">
-                            Poori</td>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#0f766e;padding:14px;">
-                            30Rs</td>
-                    </tr>
-                    <tr>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#374151;padding:14px;">
-                            Bajji</td>
-                        <td
-                            style="border:2px solid #d7ccc8;border-collapse:collapse;background-color:#fff8e1;color:#0f766e;padding:14px;">
-                            25Rs</td>
-                    </tr>
-                </table>
-            </div>
-            
-            <div class="menu-card">
-                <table class="table3">
-                    <caption><h3>Lunch & Dinner Menu</h3></caption>
-                    <tr>
-                        <th>Items</th>
-                        <th>Type</th>
-                        <th>varieties</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td rowspan="6">Biriyani</td>
-                        <td rowspan="3">veg</td>
-                        <td>panner veg Biriyani</td>
-                        <td>200Rs</td>
-                    </tr>
-                    <tr>
-                        <td>regular veg Biriyani</td>
-                        <td>180Rs</td>
-                    </tr>
-                    <tr>
-                        <td>special veg Biriyani</td>
-                        <td>220Rs</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3">non-veg</td>
-                        <td>chicken Biriyani</td>
-                        <td>250Rs</td>
-                    </tr>
-                    <tr>
-                        <td>hyderabadi Biriyani</td>
-                        <td>280Rs</td>
-                    </tr>
-                    <tr>
-                        <td>special Biriyani</td>
-                        <td>280Rs</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3">meals</td>
-                        <td rowspan="3"></td>
-                        <td>full meals</td>
-                        <td>150</td>
-                    </tr>
-                    <tr>
-                        <td>meals combopack(2mem)</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>full meals combopack(5mem)</td>
-                        <td>550</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="7">rice</td>
-                        <td rowspan="4">veg</td>
-                        <td>lemon rice</td>
-                        <td>80Rs</td>
-                    </tr>
-                    <tr>
-                        <td>veg friedrice</td>
-                        <td>90Rs</td>
-                    </tr>
-                    <tr>
-                        <td>gobi rice</td>
-                        <td>120Rs</td>
-                    </tr>
-                    <tr>
-                        <td>curd rice</td>
-                        <td>70Rs</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3">non-veg</td>
-                        <td>egg freidrice</td>
-                        <td>100Rs</td>
-                    </tr>
-                    <tr>
-                        <td>chicken friedrice</td>
-                        <td>120Rs</td>
-                    </tr>
-                    <tr>
-                        <td>double egg rice</td>
-                        <td>110Rs</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="5">curries</td>
-                        <td rowspan="5">veg & nonveg</td>
-                        <td>Panner butter masala</td>
-                        <td>90Rs</td>
-                    </tr>
-                    <tr>
-                        <td>pappu(palakura,tomato,mango)</td>
-                        <td>40Rs</td>
-                    </tr>
-                    <tr>
-                        <td>fries(allu,bendakaya,cabbage,carrot)</td>
-                        <td>40Rs</td>
-                    </tr>
-                    <tr>
-                        <td>Butter chicken curry</td>
-                        <td>120Rs</td>
-                    </tr>
-                    <tr>
-                        <td>prawns curry</td>
-                        <td>150Rs</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="menu-card">
-                <table class="table2">
-                    <caption>
-                        <h3>FastFoods & Starters</h3>
-                    </caption>
-                    <tr>
-                        <th>Items</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>noodles(veg,egg,chicken)</td>
-                        <td>50Rs,60Rs,70Rs</td>
-                    </tr>
-                    <tr>
-                        <td>FriedRice(veg,egg,chicken)</td>
-                        <td>50Rs,60Rs,70Rs</td>
-                    </tr>
-                    <tr>
-                        <td>manchuria</td>
-                        <td>50Rs</td>
-                    </tr>
-                    <tr>
-                        <td>Chicken 65</td>
-                        <td>120Rs</td>
-                    </tr>
-                    <tr>
-                        <td>chilly chicken</td>
-                        <td>120Rs</td>
-                    </tr>
-                    <tr>
-                        <td>Momos</td>
-                        <td>70Rs</td>
-                    </tr>
-                    <tr>
-                        <td>Burgers</td>
-                        <td>100Rs</td>
-                    </tr>
-                    <tr>
-                        <td>Pizzas</td>
-                        <td>120Rs</td>
-                    </tr>
-                    <tr>
-                        <td>Sandwhich</td>
-                        <td>100Rs</td>
-                    </tr>
-                </table>
+        <div class="menu-card">
+            <div class="menu">
+                <div class="menu-left">
+                    <table style="border-collapse:collapse;width:100%;margin-bottom:30px;">
+                        <caption>
+                            <h3 style=" color:#ffb703;margin:20px 0 10px;">Breakfast</h3>
+                        </caption>
+                        <tr>
+                            <th
+                                style="color:#ffffff;padding:10px;">
+                                Items</th>
+                            <th
+                                style="color:#ffffff;padding:10px;text-align:right;">
+                                Price</th>
+                        </tr>
+                        <tr>
+                            <td
+                                style="color:white;padding:10px;">
+                                Idli</td>
+                            <td
+                                style="color:#ffd166;padding:10px;text-align:right;">
+                                20Rs</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="color:white;padding:10px;">
+                                Onion Dosa</td>
+                            <td
+                                style="color:#ffd166;padding:10px;text-align:right;">
+                                30Rs</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="color:white;padding:10px;">
+                                Masala Dosa</td>
+                            <td
+                                style="color:#ffd166;padding:10px;text-align:right;">
+                                35Rs</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="color:white;padding:10px;">
+                                Poori</td>
+                            <td
+                                style="color:#ffd166;padding:10px;text-align:right;">
+                                30Rs</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="color:white;padding:10px;">
+                                Bajji</td>
+                            <td
+                                style="color:#ffd166;padding:10px;text-align:right;">
+                                25Rs</td>
+                        </tr>
+                    </table>
+                    <table class="table2">
+                        <caption>
+                            <h3 style=" color:#ffb703;margin:20px 0 10px;">FastFoods & Starters</h3>
+                        </caption>
+                        <tr>
+                            <th>Items</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>noodles(veg,egg,chicken)</td>
+                            <td>50Rs,60Rs,70Rs</td>
+                        </tr>
+                        <tr>
+                            <td>FriedRice(veg,egg,chicken)</td>
+                            <td>50Rs,60Rs,70Rs</td>
+                        </tr>
+                        <tr>
+                            <td>manchuria</td>
+                            <td>50Rs</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken 65</td>
+                            <td>120Rs</td>
+                        </tr>
+                        <tr>
+                            <td>chilly chicken</td>
+                            <td>120Rs</td>
+                        </tr>
+                        <tr>
+                            <td>Momos</td>
+                            <td>70Rs</td>
+                        </tr>
+                        <tr>
+                            <td>Burgers</td>
+                            <td>100Rs</td>
+                        </tr>
+                        <tr>
+                            <td>Pizzas</td>
+                            <td>120Rs</td>
+                        </tr>
+                        <tr>
+                            <td>Sandwhich</td>
+                            <td>100Rs</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="menu-right">
+                    <table class="table3">
+                        <caption>
+                            <h3>Lunch & Dinner Menu</h3>
+                        </caption>
+                        <tr>
+                            <th>Items</th>
+                            <th>Type</th>
+                            <th>varieties</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="6">Biriyani</td>
+                            <td rowspan="3">veg</td>
+                            <td>panner veg Biriyani</td>
+                            <td>200Rs</td>
+                        </tr>
+                        <tr>
+                            <td>regular veg Biriyani</td>
+                            <td>180Rs</td>
+                        </tr>
+                        <tr>
+                            <td>special veg Biriyani</td>
+                            <td>220Rs</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">non-veg</td>
+                            <td>chicken Biriyani</td>
+                            <td>250Rs</td>
+                        </tr>
+                        <tr>
+                            <td>hyderabadi Biriyani</td>
+                            <td>280Rs</td>
+                        </tr>
+                        <tr>
+                            <td>special Biriyani</td>
+                            <td>280Rs</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">meals</td>
+                            <td rowspan="3"></td>
+                            <td>full meals</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>meals combopack(2mem)</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>full meals combopack(5mem)</td>
+                            <td>550</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="7">rice</td>
+                            <td rowspan="4">veg</td>
+                            <td>lemon rice</td>
+                            <td>80Rs</td>
+                        </tr>
+                        <tr>
+                            <td>veg friedrice</td>
+                            <td>90Rs</td>
+                        </tr>
+                        <tr>
+                            <td>gobi rice</td>
+                            <td>120Rs</td>
+                        </tr>
+                        <tr>
+                            <td>curd rice</td>
+                            <td>70Rs</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">non-veg</td>
+                            <td>egg freidrice</td>
+                            <td>100Rs</td>
+                        </tr>
+                        <tr>
+                            <td>chicken friedrice</td>
+                            <td>120Rs</td>
+                        </tr>
+                        <tr>
+                            <td>double egg rice</td>
+                            <td>110Rs</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5">curries</td>
+                            <td rowspan="5">veg & nonveg</td>
+                            <td>Panner butter masala</td>
+                            <td>90Rs</td>
+                        </tr>
+                        <tr>
+                            <td>pappu(palakura,tomato,mango)</td>
+                            <td>40Rs</td>
+                        </tr>
+                        <tr>
+                            <td>fries(allu,bendakaya,cabbage,carrot)</td>
+                            <td>40Rs</td>
+                        </tr>
+                        <tr>
+                            <td>Butter chicken curry</td>
+                            <td>120Rs</td>
+                        </tr>
+                        <tr>
+                            <td>prawns curry</td>
+                            <td>150Rs</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
+      <footer class="home-footer">
+        <a href="orders-form.html">Orders</a>
+        <a href="delivery-form.html">Delivery Address</a>
+        <a href="payment-form.html">Payment Details</a>
+        <a href="help.html">Help</a>
+      </footer>
     </div>
-
 </body>
-
 </html>

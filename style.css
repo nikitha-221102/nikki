@@ -5,6 +5,7 @@
             background-color:#f7f1ea;
             font-family:Arial, sans-serif;
             margin:0;
+            
         }
         .container{
             background-color:#26a69a;
@@ -77,7 +78,7 @@
             color:#ff5722;
         }
         .av{
-            display:flex;
+            display:flex; 
             gap:120px;
         }
         .media{
@@ -106,36 +107,68 @@
             width:100%;
             margin-top:10px;
         }
+        .menu-card{
+            width:90%;
+            margin: 60px auto;
+            padding:60px;
+            background-image: url("images/menu-bg.jpeg");
+            background-size:cover;
+            background-position: center;
+            border-radius:20px;
+            position:relative;
+        }
+        .menu-card::before{
+            content:"";
+            position: absolute;
+            inset:0;
+            background: rgba(0,0,0,0.75);
+            border-radius: 20px;
+        }
         .menu{
             display:flex;
-            justify-content: space-between;
-            gap: 40px;
-            margin-top:15px;
-        }
-        .menu-card{
-            padding: 10px;
+            gap:50px;
+            position:relative;
+            z-index:1;
 
         }
+        .menu-left,.menu-right{
+            width: 50%;
+            color:white;
+        }
         .table3{
-            border:2px solid #ffffff;
             border-collapse:collapse;
             width:100%;
-            overflow:hidden;
         }
-        .table3 th{
-            border:2px solid #d7ccc8;
-            border-collapse:collapse;
-            background-color:#1f2933;
+        .table3 h3{
+            color:#ffb703;
+            margin:20px 0 10px;
+        }
+        .table3 td,.table th{
+            border-bottom:1px dashed rgba(255,255,255,0.5);
             color:#ffffff;
-            padding:14px;
-        }
-        .table3 td{
-            border:2px solid #d7ccc8;
-            border-collapse:collapse;
-            background-color:#fff8e1;
-            color:#374151;
-            padding:14px;
+            padding:10px;
         }
         .table3 td:last-child{
-            color:#0f766e;
+            text-align:right;
+            color:#ffd166;
+        }
+        .home-footer{
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            background:#877d7d;
+            padding:15px 0;
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            z-index:1000;
+        }
+        .home-footer a{
+            color:black;
+            text-decoration:none;
+            font-size:16px;
+        }
+        .home-footer a:hover{
+            color:#ff5200;
         }
