@@ -3,16 +3,36 @@ include "connect.php";
 if(isset($_POST['login'])){
     $email =  $_POST['email'];
     $password = $_POST['password'];
-    echo"email entered: ".$email."<br>";
-    echo"password entered:v".$password."<br>";
-    $query = "select * from users where email='$email' and password='$password'";
+    //clean input:
+    $email=trim($email);
+    $password=trim($password);
+    //case handling:
+    $email=strtolower($email);
+
+    $query = "select * from users where email='$email'";
     $result = mysqli_query($conn, $query);
-    if (mysqli_num_rows($result)>0){
-        echo"login successfull";
-        header("Location: index-1.html");
+    if(!$result){
+        die("database error");
+    }
+    if(mysqli_num_rows($result)==0){
+        print"invalud email";
     }
     else{
-        echo "Invalid email or password";
+        if (mysqli_num_rows($result)>0){
+            //string compare:
+            $row=mysqli_fetch_assoc($result);
+            if(strcmp($row['password'],$password)==0){
+                echo"login successfull";
+                header("Location: index-1.html");
+                exit();
+            }
+            else{
+                print "password does not match";
+            }   
+        }
+        else{
+            echo "Invalid email or password";
+        }
     }
 }
 ?> 

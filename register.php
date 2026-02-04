@@ -4,6 +4,21 @@ if(isset($_POST['register'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    // clean input:
+    $name=trim($name);
+    $email=trim($email);
+    $password=trim($password);
+    // validate input length:
+    if(strlen($name)<3){
+        die("name must contain atleast 3 characters");
+    }
+    if(strlen($password)<4){
+        die("password must contain minimum 4 characters");
+    }
+    //format name :
+    $name=ucwords(strtolower($name));
+    $email=strtolower($email);
+    
     $query = "insert into users (name, email, password) values ('$name','$email','$password')";
     $result=mysqli_query($conn,$query);
     if($result){
