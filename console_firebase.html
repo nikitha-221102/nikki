@@ -1,0 +1,59 @@
+<!-- <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDd2e_SSsrzYg3lzSwHFR_vGxeQgQJ5J9Q",
+    authDomain: "firstproject-3ca58.firebaseapp.com",
+    projectId: "firstproject-3ca58",
+    storageBucket: "firstproject-3ca58.firebasestorage.app",
+    messagingSenderId: "708593193095",
+    appId: "1:708593193095:web:1b730f5e78c13b81f72822"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Login</title>
+  <script src="https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js"></script>
+</head>
+<body>
+  <h2>Firebase Google Login</h2>
+  <button onclick="login()">Login with Google</button>
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyDd2e_SSsrzYg3lzSwHFR_vGxeQgQJ5J9Q",
+    authDomain: "firstproject-3ca58.firebaseapp.com",
+    projectId: "firstproject-3ca58",
+    storageBucket: "firstproject-3ca58.firebasestorage.app",
+    messagingSenderId: "708593193095",
+    appId: "1:708593193095:web:1b730f5e78c13b81f72822"
+  };
+  firebase.initializeapp(firebaseConfig);
+
+  function login(){
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      alert("Login Successful!");
+      console.log(result.user);
+    })
+    .catch(function(error){
+      console.log(error);
+    });
+  }
+  </script>
+  
+</body>
+</html> 
