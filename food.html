@@ -4,6 +4,7 @@
         <meta charset="UTF8">
         <title>Food Delivery</title>
         <link rel="stylesheet" href="style-food.css">
+        <script src="scrypt.js"></script>
         <style>
             body{
                 font-family:arial,sans-serif;
@@ -59,6 +60,7 @@
                 box-sizing: border-box;
                 overflow:hidden;
                 padding:20px;
+                cursor:pointer;
             }
             .card img{
                 width:100%;
@@ -89,7 +91,7 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="showWelcomeMessage()">
         <div class="top">
             <a href="index-1.html" class="back-btn">&#8592 home</a>
             <img src="images\home-icon.webp" class="user-icon" alt="user">
@@ -97,67 +99,67 @@
         <section class="mind-section">
             <h2>What's on your mind?</h2>
             <div class="mind-items">
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Biriyani')">
                     <img src="images/biriyani-item.webp" alt="Biriyani">
                     <p>Biriyani</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Cakes')">
                     <img src="images/cake-item.webp" alt="Cake">
                     <p>Cakes</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Pizzas')">
                     <img src="images/pizza-item.webp" alt="Pizza">
                     <p>Pizzas</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('IceCream')">
                     <img src="images/icecream-item.webp" alt="Ice Cream">
                     <p>IceCream</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Burger')">
                     <img src="images/burger-item.webp" alt="Burger">
                     <p>Burger</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Dosa')">
                     <img src="images/dosa-item.webp" alt="Dosa">
                     <p>Dosa</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Idli')">
                     <img src="images/idli-item.webp" alt="Idli">
                     <p>Idli</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Shakes')">
                     <img src="images/shake-item.webp" alt="Shake">
                     <p>Shakes</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Pasta')">
                     <img src="images/pasta-item.webp" alt="Pasta">
                     <p>Pasta</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Pastry')">
                     <img src="images/pastry.webp" alt="Pastry">
                     <p>Pastry</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Waffle')">
                     <img src="images/waffle-tem.webp" alt="Waffle">
                     <p>Waffle</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Shawarma')">
                     <img src="images/shawarma-item.webp" alt="Shawarma">
                     <p>Shawarma</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Salad')">
                     <img src="images/salad-item.webp" alt="Salad">
-                    <p>Shawarma</p>
+                    <p>Salad</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Rolls')">
                     <img src="images/rolls-iem.webp" alt="Rolls">
-                    <p>Shawarma</p>
+                    <p>Rolls</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Tea')">
                     <img src="images/tea.webp" alt="Tea">
-                    <p>Shawarma</p>
+                    <p>Tea</p>
                 </div>
-                <div class="item">
+                <div class="item" onclick="showCategoryInfo('Paratha')">
                     <img src="images/paratha-item.webp" alt="Paratha">
                     <p>Paratha</p>
                 </div>    
@@ -167,15 +169,10 @@
             <h2>Food Delivery</h2>
             <p> Order from nearby restaurants</p>
         </div>
-        <!--
-        <div class="search-box">
-            <input type="text" placeholder="search for restaurents or dishes">
-        </div>
-    --> 
 
         <div class="title">restaurants near you</div>
         <div class="container">
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Mehfil')">
               <a href="mehfil.html">
                 <img src="images/mehfil.webp">
                 <div class="card-content">
@@ -185,7 +182,7 @@
                 </div>
               </a>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Paradise')">
               <a href="paradise.html">
                 <img src="images/paradise.webp">
                 <div class="card-content">
@@ -195,7 +192,7 @@
                 </div>
               </a>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Burger King')">
               <a href="burger king.html">
                 <img src="images/burgerking.webp">
                 <div class="card-content">
@@ -205,7 +202,7 @@
                 </div>
               </a>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('KFC')">
               <a href="kfc.html">
                 <img src="images/kfc.webp">
                 <div class="card-content">

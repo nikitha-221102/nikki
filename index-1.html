@@ -4,6 +4,7 @@
 <head>
     <title>swiggy</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scrypt.js"></script>
     <style>
         .table2 {
             border-collapse: collapse;
@@ -26,7 +27,8 @@
 <body>
     <a href="login.php">Login</a>
     <div class="container">
-        <button onclick="showMessage()">Welcome</button>
+        <button onclick="promptUserProfile()">Set Profile</button>
+        <button onclick="showWelcomeMessage()">Welcome Message</button>
         <div class="top-bar">
             <div class="home">
                 <img src="images/home-icon.webp" class="icon" alt="home">
@@ -38,28 +40,28 @@
             </div>
         </div>
         <div class="search">
-            <h2 class="search-title" style="font-size:28px;">order food online</h2>
+            <h2 id="welcome-banner" class="search-title" style="font-size:28px;">order food online</h2>
             <div class="search-box">
-                <input type="text" placeholder="search for restaurents or dishes">
-                <button>search</button>
+                <input id="search-input" type="text" placeholder="search for restaurents or dishes">
+                <button id="search-btn">search</button>
             </div>
         </div>
         <div class="category-section">
-            <a href="food.html" class="category">
+            <a href="food.html" class="category" onclick="showCategoryInfo('Food Delivery')">
                 <div class="card">
                     <img src="images/food-delivery.webp">
                     <h3>Food Delivery</h3>
                     <p>up to 60% off</p>
                 </div>
             </a>
-            <a href="instamart.html" class="category">
+            <a href="instamart.html" class="category" onclick="showCategoryInfo('Instamart')">
                 <div class="card">
                     <img src="images/instamart.webp">
                     <h3>Instamart</h3>
                     <p>Free Delivery</p>
                 </div>
             </a>
-            <a href="dineout.html" class="category">
+            <a href="dineout.html" class="category" onclick="showCategoryInfo('Dineout')">
                 <div class="card">
                     <img src="images/dineout.webp">
                     <h3>Dineout</h3>
@@ -77,6 +79,7 @@
             </div>
             <div class="media">
                 <h2>Good food needs good vibes</h2>
+                <p>Listen while you order!</p>
                 <audio controls class="audio">
                     <source src="images/audio.mp3">
                 </audio>
@@ -87,9 +90,9 @@
             <p style="text-align:center;"><b><i>This is just a small preview of our menu.Explore more delicious items
                         in:</i></b></p>
             <div style="text-align:center;">
-                <a href="food.html" style="margin-right:15px;">Food Delivery</a>
-                <a href="instamart.html" style="margin-right:20px;">Instamart</a>
-                <a href="dineout.html" style="margin-right:20px;">Dineout</a>
+                <a href="food.html" style="margin-right:15px;" onclick="showCategoryInfo('Food Delivery')">Food Delivery</a>
+                <a href="instamart.html" style="margin-right:20px;" onclick="showCategoryInfo('Instamart')">Instamart</a>
+                <a href="dineout.html" style="margin-right:20px;" onclick="showCategoryInfo('Dineout')">Dineout</a>
             </div>
         </div>
         <div class="menu-card">
@@ -107,7 +110,7 @@
                                 style="color:#ffffff;padding:10px;text-align:right;">
                                 Price</th>
                         </tr>
-                        <tr>
+                        <tr onclick="addToCartWithConfirm('Idli', 20)">
                             <td
                                 style="color:white;padding:10px;">
                                 Idli</td>
@@ -115,7 +118,7 @@
                                 style="color:#ffd166;padding:10px;text-align:right;">
                                 20Rs</td>
                         </tr>
-                        <tr>
+                        <tr onclick="addToCartWithConfirm('Onion Dosa', 30)">
                             <td
                                 style="color:white;padding:10px;">
                                 Onion Dosa</td>
@@ -123,7 +126,7 @@
                                 style="color:#ffd166;padding:10px;text-align:right;">
                                 30Rs</td>
                         </tr>
-                        <tr>
+                        <tr onclick="addToCartWithConfirm('Masala Dosa', 35)">
                             <td
                                 style="color:white;padding:10px;">
                                 Masala Dosa</td>
@@ -131,7 +134,7 @@
                                 style="color:#ffd166;padding:10px;text-align:right;">
                                 35Rs</td>
                         </tr>
-                        <tr>
+                        <tr onclick="addToCartWithConfirm('Poori', 30)">
                             <td
                                 style="color:white;padding:10px;">
                                 Poori</td>
@@ -139,7 +142,7 @@
                                 style="color:#ffd166;padding:10px;text-align:right;">
                                 30Rs</td>
                         </tr>
-                        <tr>
+                        <tr onclick="addToCartWithConfirm('Bajji', 25)">
                             <td
                                 style="color:white;padding:10px;">
                                 Bajji</td>

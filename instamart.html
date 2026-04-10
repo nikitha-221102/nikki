@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>INSTAMART</title>
+        <script src="scrypt.js"></script>
         <style>
             body{
                 font-family:arial,sans-serif;
@@ -43,6 +44,7 @@
                 width:33.33%;
                 text-align:center;
                 vertical-align:top;
+                cursor:pointer;
             }
             .card img{
                 width:70px;
@@ -54,10 +56,10 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="showWelcomeMessage()">
         <div class="header">
             <h2>Instamart</h2>
-            <p> 8 min delivery</h2>
+            <p> 8 min delivery</p>
         </div>
         <div class="search-box">
             <input type="text" placeholder="search for items">
@@ -65,43 +67,43 @@
         <div class="title">grocery & kitchen</div>
         <div class="container">
           <div class="row">
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Fresh Vegetables')">
                 <img src="images/vegetables.webp">
                 <p>Fresh Vegetables</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Fresh Fruits')">
                 <img src="images/fruits.webp">
                 <p>Fresh Fruits</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Dairy Bread & Eggs')">
                 <img src="images/bread.webp">
                 <p>Dairy Bread & Eggs</p>
             </div>
           </div>
           <div class="row">
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Cereals & Breakfast')">
                 <img src="images/cearls.webp">
                 <p>Cereals & Breakfast</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Atta, Rice & Dal')">
                 <img src="images/atta.webp">
                 <p>Atta, Rice % Dal</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Oils and Ghee')">
                 <img src="images/oil.webp">
                 <p>Oils and Ghee</p>
             </div>
           </div>
           <div class="row">
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Dry Fruits and Seeds Mix')">
                 <img src="images/dryfruits.webp">
                 <p>Dry Fruits and Seeds Mix</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Biscuits and Cakes')">
                 <img src="images/biscuits.webp">
                 <p>Biscuits and Cakes</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Meat and Seafoods')">
                 <img src="images/meet.webp">
                 <p>Meat and Seafoods</p>
             </div>
@@ -110,25 +112,25 @@
     <div class="title">Snacks and Drinks</div>
     <div class="container">
         <div class="row">
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Cold Drinks and Juices')">
                 <img src="images/cold drinks.webp">
                 <p>Cold Drinks and Juices</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Ice Creams')">
                 <img src="images/icecreams.webp">
                 <p>Ice Creams</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Chips and Namkeens')">
                 <img src="images/chips.webp">
                 <p>Chips and Namkeens</p>
             </div>
         </div>
         <div class="container">
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Chocolates')">
                 <img src="images/chocolates.webp">
                 <p>Chocolates</p>
             </div>
-            <div class="card">
+            <div class="card" onclick="showCategoryInfo('Noodles,Pasta,Vermicelli')">
                 <img src="images/noodles.webp">
                 <p>Noodles,Pasta,Vermicelli</p>
             </div>
