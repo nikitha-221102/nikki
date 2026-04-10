@@ -1,6 +1,7 @@
 <?php
-require_once 'vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(_DIR_);
+require_once __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $client = new Google_Client();
@@ -18,5 +19,7 @@ if (isset($_GET['code'])) {
     echo "<h2>Login Successful</h2>";
     echo "Name: " . $user->name . "<br>";
     echo "Email: " . $user->email;
+} else {
+    echo "Error: No code received";
 }
 ?>

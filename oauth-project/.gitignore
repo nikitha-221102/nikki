@@ -1,0 +1,4 @@
+.env
+vendor/
+client_secret.json
+oauth-project/.env

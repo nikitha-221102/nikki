@@ -25,15 +25,76 @@ const cart = {
     addItem: function(name, price) {
         this.items.push({ name: name, price: price });
         currentCartTotal += price;
+        this.saveCart();
         this.showTotal();
+        this.updateCartUI();
+    },
+    saveCart: function() {
+        localStorage.setItem('swiggyCart', JSON.stringify(this.items));
+        localStorage.setItem('swiggyTotal', currentCartTotal);
+    },
+    loadCart: function() {
+        let savedItems = localStorage.getItem('swiggyCart');
+        let savedTotal = localStorage.getItem('swiggyTotal');
+        if (savedItems) {
+            this.items = JSON.parse(savedItems);
+            currentCartTotal = parseFloat(savedTotal);
+        }
+    },
+    clearCart: function() {
+        this.items = [];
+        currentCartTotal = 0;
+        localStorage.removeItem('swiggyCart');
+        localStorage.removeItem('swiggyTotal');
+        this.updateCartUI();
+        alert("Cart cleared!");
+        location.reload(); // Refresh to update pages
     },
     showTotal: function() {
         let totalWithTax = currentCartTotal + (currentCartTotal * TAX_RATE) + deliveryFee;
         alert("Item added! \nSubtotal: " + currentCartTotal + "Rs\nTax (5%): " + (currentCartTotal * TAX_RATE) + "Rs\nDelivery: " + deliveryFee + "Rs\nGrand Total: " + totalWithTax.toFixed(2) + "Rs");
+    },
+    updateCartUI: function() {
+        let cartDisplay = document.getElementById("cart-summary");
+        if (cartDisplay) {
+            cartDisplay.style.display = currentCartTotal > 0 ? "block" : "none";
+            let itemCount = document.getElementById("cart-count");
+            let itemTotal = document.getElementById("cart-total");
+            if (itemCount) itemCount.innerText = this.items.length;
+            if (itemTotal) itemTotal.innerText = currentCartTotal;
+        }
     }
 };
 
 // --- Functions & Pop-up Boxes ---
+function displayOrders() {
+    let orderListContainer = document.querySelector(".order-list");
+    if (orderListContainer && cart.items.length > 0) {
+        // Clear static demo orders if cart has items
+        orderListContainer.innerHTML = "<h2>Your Active Orders</h2>";
+        
+        cart.items.forEach((item, index) => {
+            let orderDiv = document.createElement("div");
+            orderDiv.className = "order";
+            orderDiv.innerHTML = `
+                <h3>Order #${index + 1}</h3>
+                <p>${item.name}</p>
+                <p>${item.price}Rs</p>
+                <span class="status-badge ontheway">Processing</span>
+            `;
+            orderListContainer.appendChild(orderDiv);
+        });
+
+        // Add a clear button
+        let clearBtn = document.createElement("button");
+        clearBtn.innerText = "Clear All Orders";
+        clearBtn.style.margin = "20px";
+        clearBtn.style.padding = "10px";
+        clearBtn.onclick = () => cart.clearCart();
+        orderListContainer.appendChild(clearBtn);
+    }
+}
+
 function showWelcomeMessage() {
     alert("Welcome to our application! Enjoy the best food around.");
 }
@@ -89,6 +150,15 @@ function showCategoryInfo(categoryName) {
 
 // --- Events Setup ---
 document.addEventListener("DOMContentLoaded", function() {
+    // Load cart on every page
+    cart.loadCart();
+    cart.updateCartUI();
+
+    // If on orders page, display them
+    if (window.location.pathname.includes("orders-form.html") || document.title.toLowerCase().includes("orders")) {
+        displayOrders();
+    }
+
     // Attach search event
     let searchBtn = document.getElementById("search-btn");
     if (searchBtn) {

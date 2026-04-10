@@ -1,67 +1,150 @@
-body{
-    font-family:arial;
-    background:#f5f5f5;
-    margin:0;
-    padding:20px;
+:root {
+    --primary: #ff5200;
+    --bg-light: #f7f9fc;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --success: #00b894;
+    --warning: #fdcb6e;
+    --error: #d63031;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
-.order-container{
-    display:flex;
-    height:calc(100vh-60px);
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-light);
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
 }
-.order-list{
-    width:35%;
-    background:#fff;
-    overflow-y:auto;
-    border-right:1px solid #ddd;
-}
-.order{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:15px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-.order h3{
-     margin:0;
-}
-.delivered{
-    color:green;
-    font-weight:bold;
-}
-.ontheway{
-    color:orange;
-    font-weight:bold;
-}
-.cancelled{
-    color:red;
-    font-weight:bold;
-}
-.order-form{
-    background:white;
+
+.nav-back {
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width:450px;
 }
-.order-form label{
-    display:block;
-    margin-top:10px;
-    font-weight:bold;
+
+.nav-back a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
 }
-.order-form input,.order-form textarea,.order-form select{
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    border:1px solid #ccc;
-    border-radius:5px;
+
+.order-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 20px;
+    height: calc(100vh - 100px);
 }
-.order-form button{
-    margin-top:15px;
-    padding:10px;
-    width:100%;
-    background:#ff5200;
-    border:none;
-    color:white;
-    font-size:16px;
-    border-radius:5px;
+
+.order-list {
+    flex: 1;
+    background: transparent;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.order-list h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.order {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.order:hover {
+    transform: translateY(-2px);
+}
+
+.order h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.order p {
+    margin: 4px 0;
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.delivered { background: rgba(0, 184, 148, 0.1); color: var(--success); }
+.ontheway { background: rgba(253, 203, 110, 0.1); color: var(--warning); }
+.cancelled { background: rgba(214, 48, 49, 0.1); color: var(--error); }
+
+.order-details {
+    flex: 1.2;
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.order-details h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.order-form label {
+    display: block;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.order-form input, .order-form textarea, .order-form select {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 2px solid #eee;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    background: transparent;
+}
+
+.order-form input:focus, .order-form textarea:focus, .order-form select:focus {
+    border-bottom-color: var(--primary);
+}
+
+.order-form button {
+    margin-top: 40px;
+    padding: 16px;
+    width: 100%;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 82, 0, 0.3);
+    transition: opacity 0.2s;
+}
+
+.order-form button:hover {
+    opacity: 0.9;
 }
