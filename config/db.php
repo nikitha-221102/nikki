@@ -1,10 +1,10 @@
 <?php
-require '../vendor/autoload.php';
-$mongoUri="mongodb://localhost:27017";
-try{
-    $client=new MongoDB\Client($mongoUri);
-    #db=$clinet->userDB;
-}catch(Exception $e){
-    die("Database connection failed: ".$e->getMessage());
+require __DIR__ . '/../vendor/autoload.php';
+
+try {
+    $client = new MongoDB\Client("mongodb://localhost:27017");
+    $db = $client->userDB;
+} catch (Exception $e) {
+    die("DB connection failed: " . $e->getMessage());
 }
 ?>

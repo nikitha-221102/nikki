@@ -1,13 +1,15 @@
 <?php
 require '../config/db.php';
 
-$email = $_POST['email'];
-$newName = $_POST['name'];
+$email = $_POST['email'] ?? '';
+$name = $_POST['name'] ?? '';
 
-$result = $db->users->updateOne(
+if (!$email || !$name) die("All fields required");
+
+$db->users->updateOne(
     ['email' => $email],
-    ['$set' => ['name' => $newName]]
+    ['$set' => ['name' => $name]]
 );
 
-echo "User Updated Successfully";
+echo "Updated successfully";
 ?>

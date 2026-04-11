@@ -1,9 +1,11 @@
 <?php
 require '../config/db.php';
 
-$email = $_POST['email'];
+$email = $_POST['email'] ?? $_GET['email'] ?? '';
+
+if (!$email) die("Email required");
 
 $db->users->deleteOne(['email' => $email]);
 
-echo "User Deleted Successfully";
+echo "Deleted successfully";
 ?>
